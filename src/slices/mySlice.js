@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 let initialState = {};
-initialState = { theme: "light", user: { email: "", username: "" }, review: "", userReviews: [], isLoggedIn: false, alert: ["", false, "error"] };
+initialState = { theme: "dark", user: { email: "", username: "" }, review: "", userReviews: [], isLoggedIn: false, alert: ["", false, "error"] };
 
 const mySlice = createSlice({
     name: "mySlice",
