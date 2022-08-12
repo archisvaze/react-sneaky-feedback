@@ -27,11 +27,9 @@ export default function Header() {
 
                 <div className="right">
 
-
                     <button style={{ display: state.isLoggedIn === true ? "flex" : 'none' }} onClick={() => {
                         logout();
                     }} className="logout-button">Logout</button>
-
 
                     <img style={{ cursor: "Pointer" }} onClick={() => dispatch(toggleTheme())} src={state.theme === "light" ? sun : moon} alt="" />
 
