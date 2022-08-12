@@ -15,6 +15,7 @@ export default function Signup() {
 
     useEffect(() => {
         dispatch(logOut())
+        // eslint-disable-next-line
     }, [])
 
     function post(obj) {

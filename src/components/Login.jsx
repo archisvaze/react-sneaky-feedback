@@ -16,6 +16,7 @@ export default function Login() {
 
     useEffect(() =>{
         dispatch(logOut())
+        // eslint-disable-next-line
     }, [])
 
     function post(obj) {
