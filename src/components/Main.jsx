@@ -65,9 +65,9 @@ export default function Main() {
                     <h4>{state.user.email}</h4>
                     <h5>Your Review Link</h5>
                     <Link to={`/${state.user.displayName}`}>
-                        <div> {`http://localhost:3000/${state.user.displayName}`}
+                        <div> {`https://bejewelled-malasada-a4a4bc.netlify.app/${state.user.displayName}`}
 
-                            <CopyToClipboard ressult={console.log(`copied`)} text={`http://localhost:3000/${state.user.displayName}`}>
+                            <CopyToClipboard ressult={console.log(`copied`)} text={`https://bejewelled-malasada-a4a4bc.netlify.app/${state.user.displayName}`}>
                                 <button onClick={(e) => {
                                     e.preventDefault();
                                     //show alert
