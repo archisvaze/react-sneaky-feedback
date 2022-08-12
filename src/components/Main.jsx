@@ -14,7 +14,6 @@ export default function Main() {
     let navigate = useNavigate();
     const dispatch = useDispatch();
     const state = useSelector(state => state.myState)
-    console.log(state);
     useEffect(() => {
         const user = auth.currentUser;
         if (user !== null) {
