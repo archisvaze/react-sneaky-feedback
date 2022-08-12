@@ -57,7 +57,7 @@ export default function UserReview() {
     return (
         <div className={"userreview-container " + state.theme}>
             <img src={user} alt="" className="user" />
-            <h3>Post a review about {displayName}</h3>
+            <h3>Post a sneaky anonymous feedback about {displayName}</h3>
             <textarea onChange={(e) => {
                 dispatch(setReview(e.target.value))
             }} className='review-input' type="text" placeholder='Write here' value={state.review} />
