@@ -22,7 +22,7 @@ export default function Header() {
             <div className="header">
 
                 <div className="left">
-                    <h2>Anonym Feedback</h2>
+                    <h2>Sneaky Feedback</h2>
                 </div>
 
                 <div className="right">

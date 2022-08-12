@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import { db } from '../firebase_config';
 import { useSelector, useDispatch } from 'react-redux';
 import { setAlert, setReview } from '../slices/mySlice';
+import user from "../icons/user.png"
 
 export default function UserReview() {
     const state = useSelector(state => state.myState)
@@ -55,7 +56,8 @@ export default function UserReview() {
 
     return (
         <div className={"userreview-container " + state.theme}>
-            <h3>Post a review about {state.user.displayName}</h3>
+            <img src={user} alt="" className="user" />
+            <h3>Post a review about {displayName}</h3>
             <textarea onChange={(e) => {
                 dispatch(setReview(e.target.value))
             }} className='review-input' type="text" placeholder='Write here' value={state.review} />

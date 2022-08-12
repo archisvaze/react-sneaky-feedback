@@ -8,6 +8,7 @@ import { useNavigate } from "react-router-dom";
 import { setAlert, setUser, setUserReviews } from '../slices/mySlice';
 import { doc, getDoc } from 'firebase/firestore';
 import CopyToClipboard from 'react-copy-to-clipboard';
+import user from "../icons/user.png"
 
 export default function Main() {
     let navigate = useNavigate();
@@ -61,9 +62,10 @@ export default function Main() {
         <div className={'main-container ' + state.theme}>
             <div className="main">
                 <div className="profile">
+                    <img src={user} alt="" className="user" />
                     <h4>{state.user.displayName}</h4>
                     <h4>{state.user.email}</h4>
-                    <h5>Your Review Link</h5>
+                    <h5>Your feedback link</h5>
                     <Link to={`/${state.user.displayName}`}>
                         <div> {`https://bejewelled-malasada-a4a4bc.netlify.app/${state.user.displayName}`}
 
@@ -86,7 +88,7 @@ export default function Main() {
 
                 <br />
 
-                <h3>Your Reviews</h3>
+                <h3>Here's what people are saying about you... </h3>
                 <div className="reviews-container">
                     {state.userReviews.map(string => {
                         let date = string.split("_")[1];

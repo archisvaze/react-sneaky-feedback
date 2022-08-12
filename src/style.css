@@ -107,6 +107,11 @@ button {
     margin-top: 50px;
 }
 
+.user {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
 .profile h5 {
     letter-spacing: 1px;
     margin-top: 20px;
