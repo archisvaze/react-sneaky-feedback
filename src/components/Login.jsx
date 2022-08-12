@@ -3,8 +3,9 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { auth } from '../firebase_config';
 import { useNavigate } from "react-router-dom";
-import { setAlert, setUser } from '../slices/mySlice';
+import { logOut, setAlert, setUser } from '../slices/mySlice';
 import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
 
 
 
@@ -12,6 +13,10 @@ export default function Login() {
     let navigate = useNavigate();
     let dispatch = useDispatch();
     const state = useSelector(state => state.myState)
+
+    useEffect(() =>{
+        dispatch(logOut())
+    }, [])
 
     function post(obj) {
         let email = obj['email'];

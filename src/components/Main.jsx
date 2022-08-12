@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 import { db, auth } from '../firebase_config';
 import { updateProfile } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
-import { setAlert, setUser, setUserReviews } from '../slices/mySlice';
-import { doc, getDoc } from 'firebase/firestore';
+import { logOut, setAlert, setUser, setUserReviews } from '../slices/mySlice';
+import { arrayRemove, doc, getDoc, updateDoc } from 'firebase/firestore';
 import CopyToClipboard from 'react-copy-to-clipboard';
 import user from "../icons/user.png"
 
@@ -39,6 +39,7 @@ export default function Main() {
                 });
             })
         } else {
+            dispatch(logOut())
             navigate("/")
         }
         // eslint-disable-next-line
@@ -55,6 +56,14 @@ export default function Main() {
             console.log("No such document!");
         }
     }
+    let deleteReview = async (review) => {
+        const docRef = doc(db, "users", state.user.displayName);
+        await (updateDoc(docRef, {
+            reviews: arrayRemove(review)
+        }))
+        getReviews(state.user.displayName);
+    }
+
 
     console.log(state)
     return (
@@ -95,8 +104,10 @@ export default function Main() {
                         return (
                             <div key={string} className="review">
                                 <p className='review-title'>"{review}"</p>
-
                                 <p className='review-date'>{date}</p>
+                                <button onClick={() => {
+                                    deleteReview(string);
+                                }} className="delete-button">X</button>
                             </div>
                         )
                     })}

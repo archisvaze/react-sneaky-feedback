@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from "react-router-dom";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth, db } from '../firebase_config';
-import { setAlert, setUser } from '../slices/mySlice';
+import { logOut, setAlert, setUser } from '../slices/mySlice';
 import { doc, getDoc, setDoc } from "firebase/firestore";
 
 
@@ -12,6 +12,10 @@ export default function Signup() {
     let navigate = useNavigate();
     let dispatch = useDispatch();
     let state = useSelector(state => state.myState);
+
+    useEffect(() => {
+        dispatch(logOut())
+    }, [])
 
     function post(obj) {
         let email = obj.email;

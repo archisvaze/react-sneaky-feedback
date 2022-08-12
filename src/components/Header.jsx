@@ -2,7 +2,7 @@ import React from 'react'
 import { useSelector, useDispatch } from 'react-redux';
 import sun from "../icons/sun.svg"
 import moon from "../icons/moon.svg"
-import { toggleTheme } from "../slices/mySlice"
+import { logOut, toggleTheme } from "../slices/mySlice"
 import { useNavigate } from 'react-router-dom';
 import { auth } from '../firebase_config';
 
@@ -13,6 +13,7 @@ export default function Header() {
 
     function logout() {
         auth.signOut();
+        dispatch(logOut())
         navigate("/")
     }
     return (

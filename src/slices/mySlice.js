@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 let initialState = {};
-initialState = { theme: "dark", user: { email: "", username: "" }, review: "", userReviews: [], isLoggedIn: false, alert: ["", false, "error"] };
+initialState = { theme: "dark", user: { email: "", displayName: "" }, review: "", userReviews: [], isLoggedIn: false, alert: ["", false, "error"] };
 
 const mySlice = createSlice({
     name: "mySlice",
@@ -38,5 +38,5 @@ const mySlice = createSlice({
 })
 
 
-export const { toggleTheme, setUser, setReview, setUserReviews, setAlert } = mySlice.actions;
+export const { toggleTheme, setUser, setReview, setUserReviews, setAlert, logOut } = mySlice.actions;
 export default mySlice.reducer;
