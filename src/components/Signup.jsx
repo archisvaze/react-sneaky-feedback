@@ -67,7 +67,7 @@ export default function Signup() {
     return (
         <div className={'signup-container ' + state.theme}>
             <div className="form-container">
-                <div className="form-title">Signup to get a Review Link</div>
+                <div className="form-title">Signup to create a Sneaky Feedback Link</div>
                 <Formik
 
                     initialValues={{ username: '', email: '', password: '', passwordCheck: '' }}

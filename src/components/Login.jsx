@@ -48,7 +48,7 @@ export default function Login() {
 
 
             <div className={"form-container"}>
-                <div className="form-title">Login to see your reviews.</div>
+                <div className="form-title">Login to check your Sneaky Feedbacks.</div>
                 <Formik
 
                     initialValues={{ email: '', password: '' }}
