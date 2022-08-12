@@ -66,7 +66,7 @@ export default function Main() {
                     <h4>{state.user.displayName}</h4>
                     <h4>{state.user.email}</h4>
                     <h5>Your feedback link</h5>
-                    <Link to={`/${state.user.displayName}`}>
+                    <Link to={`/${state.user.displayName}`} target="_blank">
                         <div> {`https://bejewelled-malasada-a4a4bc.netlify.app/${state.user.displayName}`}
 
                             <CopyToClipboard ressult={console.log(`copied`)} text={`https://bejewelled-malasada-a4a4bc.netlify.app/${state.user.displayName}`}>
