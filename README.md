@@ -24,20 +24,24 @@ Now when `SanjayKp` logs in again he is able to see a new feedback but he can't 
 - You will need a username field too so that each user can be assigned with a unique feedback page from where they can collect feedbacks.
 You need to ensure that username is unique. Two users can't have the same username.
 
+![Screenshot 2022-08-14 071904](https://user-images.githubusercontent.com/92965519/184519289-fafd9f1f-61a4-43b4-9c29-69e29633ef6e.png)
+
 ##  Login page design
 - Login through email and password.
 
 # Part 2
 ## Profile page design
 
-Notice that we are displaying the Username on the top of the page, and there is a delete icon for each feedback card. You can ignore the flag icon.
+![Screenshot 2022-08-14 072231](https://user-images.githubusercontent.com/92965519/184519292-7c11a666-dc31-4526-8f96-ce1160741e02.png)
 
 ## Feedback page design
 Anyone can give the feedback if they have the link
 
+![Screenshot 2022-08-14 072532](https://user-images.githubusercontent.com/92965519/184519329-277d5f46-a132-4f97-b60a-22fab4b2baa6.png)
+
 ## Tech stack
-- React
-- Firebase (as backend)
+- React (frontend)
+- Firebase (backend)
 - Redux or Context API (optional)
 
 You can use any third party UI Library if you want to.
