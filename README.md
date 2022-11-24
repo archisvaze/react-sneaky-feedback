@@ -1,6 +1,6 @@
 # Anonymous feedback website
 
-Link: https://bejewelled-malasada-a4a4bc.netlify.app/
+Link: https://sneeky-feedback.netlify.app/
 
 You have been asked to create an anonymous feedback website. In this website users can signup and register for their custom feedback page.
 Other users can visit this page and provide constructive anonymous feedback to the user.
